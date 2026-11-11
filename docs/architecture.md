@@ -21,7 +21,9 @@ Bază de date - Componenta care stochează persistent informațiile utilizatoril
 
 Frontend-ul comunică cu backend-ul prin cereri HTTP, iar backend-ul comunică cu baza de date prin interogări SQL.
 
-Diagrama arhitecturii va fi adăugată separat.
+
+![Diagrama arhitecturii DailyHub](architecture-diagram.png)
+
 
 COMPONENTA FRONTEND
 
