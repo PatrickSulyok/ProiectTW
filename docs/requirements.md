@@ -1,62 +1,135 @@
 
 DailyHub - Cerințele aplicației
+DESCRIERE GENERALĂ
 
-1. Descriere generală
+DailyHub este o aplicație web pentru organizarea activităților cotidiene, individuale și colaborative. Aplicația propune gestionarea sarcinilor, evenimentelor și rezervărilor personale, listelor comune, notițelor, bugetelor și documentelor.
 
-DailyHub este o aplicație web destinată organizării activităților cotidiene, atât individuale, cât și colaborative. Aplicația permite gestionarea sarcinilor, calendarelor, listelor comune, notițelor, bugetelor personale și documentelor.
+Fiecare utilizator are un spațiu personal (My Space) și poate crea sau participa la spații de lucru comune (Workspace-uri). Accesul la un Workspace se obține printr-o invitație acceptată de utilizator. Datele personale rămân separate de datele partajate.
 
-Fiecare utilizator beneficiază de un spațiu personal și poate crea spații de lucru comune, numite Workspace-uri, în care poate colabora cu alte persoane prin intermediul unui sistem de invitații.
+UTILIZATORI ȘI ROLURI
 
-2. Cerințe funcționale
+Utilizator: persoană care deține un cont și își gestionează activitățile personale.
 
-1. Utilizatorul poate crea un cont nou.
+Administrator Workspace: utilizatorul care creează spațiul comun, invită membri și gestionează apartenența la grup.
+
+Membru Workspace: utilizatorul care a acceptat invitația și poate contribui la conținutul comun, fără a administra membrii.
+
+CERINȚE FUNCȚIONALE
+
+Conturi și spațiu personal
+
+Cerința 1 - Utilizatorul poate crea un cont folosind o adresă de email și o parolă.
+Prioritate: Esențială (MVP)
+
+Cerința 2 - Utilizatorul se poate autentifica și deconecta.
+Prioritate: Esențială (MVP)
+
+Cerința 3 - Utilizatorul poate vizualiza într-un Dashboard un rezumat al activităților sale.
+Prioritate: Esențială (MVP)
+
+Sarcini și calendar personal
+
+Cerința 4 - Utilizatorul poate crea, vizualiza, modifica și șterge sarcini personale.
+Prioritate: Esențială (MVP)
+
+Cerința 5 - Utilizatorul poate stabili termene-limită și priorități pentru sarcini și le poate marca drept finalizate.
+Prioritate: Esențială (MVP)
+
+Cerința 6 - Utilizatorul poate crea, vizualiza, modifica și șterge evenimente și rezervări personale în calendar, cu dată și oră.
+Prioritate: Esențială (MVP)
+
+Workspace-uri și invitații
+
+Cerința 7 - Utilizatorul poate crea un Workspace și îi poate modifica numele și descrierea.
+Prioritate: Esențială (MVP)
+
+Cerința 8 - Administratorul poate invita prin adresa de email utilizatori care au deja cont DailyHub.
+Prioritate: Esențială (MVP)
+
+Cerința 9 - Utilizatorul invitat poate vedea invitația în aplicație și o poate accepta sau refuza.
+Prioritate: Esențială (MVP)
+
+Cerința 10 - Administratorul poate elimina membri, iar un membru poate părăsi un Workspace.
+Prioritate: Esențială (MVP)
+
+Notițe, sarcini și liste comune
+
+Cerința 11 - Membrii pot crea, vizualiza, modifica și șterge notițe comune în Workspace. Modificările se salvează și devin vizibile la redeschiderea sau reîncărcarea notiței; nu se solicită editare simultană în timp real.
+Prioritate: Esențială (MVP)
+
+Cerința 12 - Membrii pot crea, modifica și șterge sarcini comune și le pot atribui unui membru al Workspace-ului.
+Prioritate: Esențială (MVP)
+
+Cerința 13 - Membrii pot crea liste colaborative, adăuga sau elimina elemente și marca elementele drept finalizate.
+Prioritate: Esențială (MVP)
+
+Extinderi planificate
+
+Cerința 14 - Membrii pot adăuga evenimente într-un calendar comun și pot partaja un orar introdus manual, inclusiv activități săptămânale recurente.
+Prioritate: Importantă (Etapa 2)
+
+Cerința 15 - Utilizatorul poate înregistra venituri și cheltuieli, le poate organiza pe categorii și poate consulta soldul personal.
+Prioritate: Importantă (Etapa 2)
+
+Cerința 16 - Utilizatorul poate încărca, organiza și descărca documente personale sau partajate într-un Workspace, în funcție de permisiuni.
+Prioritate: Opțională (Etapa 3)
+
+Cerința 17 - Membrii pot organiza activități de grup extinse, precum planificarea în familie sau distribuirea responsabilităților recurente.
+Prioritate: Opțională (Etapa 3)
+
+CERINȚE NEFUNCȚIONALE
+
+Cerința 1 - Interfața trebuie să fie clară și ușor de utilizat, cu navigare consecventă între module.
 Prioritate: Esențială
 
-2. Utilizatorul se poate autentifica și deconecta.
+Cerința 2 - Interfața trebuie să se adapteze la ecrane de calculator, tabletă și telefon.
 Prioritate: Esențială
 
-3. Utilizatorul poate crea, modifica și șterge sarcini.
+Cerința 3 - Parolele trebuie stocate sub formă de hash securizat, nu în text simplu.
 Prioritate: Esențială
 
-4. Utilizatorul poate stabili priorități și marca sarcinile drept finalizate.
+Cerința 4 - Backend-ul trebuie să verifice autentificarea și drepturile de acces la fiecare operație asupra datelor private sau partajate.
 Prioritate: Esențială
 
-5. Utilizatorul poate crea și administra Workspace-uri.
+Cerința 5 - Datele primite de la utilizatori trebuie validate pe server, iar erorile trebuie comunicate clar.
 Prioritate: Esențială
 
-6. Administratorul unui Workspace poate invita alți utilizatori, iar aceștia pot accepta sau refuza invitațiile.
+Cerința 6 - Informațiile salvate trebuie să persiste în baza de date și să fie disponibile la autentificări ulterioare.
 Prioritate: Esențială
 
-7. Membrii unui Workspace pot crea, vizualiza și modifica notițe comune. Modificările sunt salvate și devin disponibile celorlalți membri.
-Prioritate: Esențială
-
-8. Membrii pot crea și actualiza liste colaborative.
-Prioritate: Esențială
-
-9. Sarcinile comune pot fi atribuite membrilor unui Workspace.
-Prioritate: Esențială
-
-10. Utilizatorul poate crea și vizualiza evenimente în calendarul personal.
-Prioritate: Esențială
-
-11. Membrii pot utiliza un calendar comun și pot partaja un orar.
+Cerința 7 - Modificarea unei notițe comune nu trebuie să suprascrie fără avertizare o versiune mai nouă salvată între timp de alt membru.
 Prioritate: Importantă
 
-12. Utilizatorul poate înregistra venituri și cheltuieli și poate consulta soldul personal.
+Cerința 8 - Operațiile uzuale, precum afișarea sarcinilor sau salvarea unei notițe, ar trebui să răspundă în cel mult 3 secunde în condiții normale de testare.
 Prioritate: Importantă
 
-13. Utilizatorul poate încărca, organiza și descărca documente.
-Prioritate: Opțională
+Cerința 9 - Aplicația trebuie să funcționeze în versiunile moderne ale browserelor Chrome, Firefox, Safari și Edge.
+Prioritate: Importantă
 
-14. Membrii pot organiza activități de grup extinse în cadrul unui Workspace.
-Prioritate: Opțională
+Cerința 10 - Codul trebuie organizat în module separate, pentru a permite dezvoltarea și testarea independentă a funcționalităților.
+Prioritate: Importantă
 
-3. Prioritizarea implementării
+Cerința 11 - Modificările proiectului trebuie urmărite prin Git și GitHub, folosind branch-uri și Pull Requests.
+Prioritate: Importantă
 
-Funcționalitățile esențiale vor fi dezvoltate în prima versiune a aplicației.
+Cerința 12 - Arhitectura trebuie să permită adăugarea ulterioară de module fără rescrierea completă a aplicației.
+Prioritate: Importantă
 
-Funcționalitățile importante vor fi implementate ulterior, după finalizarea și testarea primei versiuni.
+PRIORITIZAREA IMPLEMENTĂRII
 
-Funcționalitățile opționale reprezintă extinderi care vor fi dezvoltate în funcție de timpul disponibil.
+Esențială (MVP): funcționalitățile necesare primei versiuni utilizabile, incluzând conturile, sarcinile, calendarul personal și colaborarea de bază în Workspace-uri.
 
-Această împărțire permite dezvoltarea graduală a aplicației și concentrarea inițială asupra funcționalităților principale.
+Importantă (Etapa 2): calendarul comun, partajarea orarului și bugetele personale.
+
+Opțională (Etapa 3): gestionarea documentelor și planificarea avansată a activităților în grup.
+
+Etapele sunt propuneri de implementare și pot fi ajustate în funcție de timpul disponibil și de cerințele ulterioare ale profesorului.
+
+TEHNOLOGII PROPUSE
+
+Frontend: HTML, CSS și JavaScript simplu.
+Backend: Node.js și Express.
+Bază de date: PostgreSQL.
+Versionare și colaborare: Git și GitHub.
+
+Aceste tehnologii vor fi detaliate și justificate în documentele de arhitectură și de planificare a implementării.
